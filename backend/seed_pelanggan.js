@@ -133,6 +133,9 @@ async function buildSeederData() {
 
     const idPaket = paketMap[Number(r["ABONEMEN"])] || 8;
 
+    // Skip paket 8
+    if (idPaket === 8) continue;
+
     result.push({
       nama_pelanggan: r["NAMA LENGKAP"] || "",
       alamat: alamatFinal || "",
@@ -141,7 +144,7 @@ async function buildSeederData() {
       tgl_aktif_kembali: null,
       longtitude: String(coords.longitude || ""),
       latitude: String(coords.latitude || ""),
-      status_pelanggan: idPaket === 8 ? "Fasum" : "aktif",
+      status_pelanggan: "aktif",
       id_paket: idPaket,
       usn_mikrotik: r["ID"] || "",
       ip_address: "",

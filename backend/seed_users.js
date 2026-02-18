@@ -7,13 +7,18 @@ dotenv.config();
 
 const admins = [
   {
-    username: "admin",
-    nama_lengkap: "Administrator 1",
+    username: "bayuadi",
+    nama_lengkap: "Bayu Adi",
     role: "admin",
   },
   {
-    username: "admin2",
-    nama_lengkap: "Administrator 2",
+    username: "menikrohaya",
+    nama_lengkap: "Menik Rohaya",
+    role: "admin",
+  },
+  {
+    username: "oscarfileas",
+    nama_lengkap: "Oscar Fileas",
     role: "admin",
   },
 ];
