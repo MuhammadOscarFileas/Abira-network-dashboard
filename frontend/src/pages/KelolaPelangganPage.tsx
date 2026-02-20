@@ -134,7 +134,7 @@ function KelolaPelangganPage() {
       id_paket: String(p.id_paket),
       ip_address: p.ip_address,
       usn_mikrotik: p.usn_mikrotik,
-      link_maps: p.link_maps ?? "",
+      link_maps: p.latitude && p.longtitude ? `https://maps.google.com/?q=${p.latitude},${p.longtitude}` : (p.link_maps ?? ""),
       status_pelanggan: p.status_pelanggan,
     });
     setShowForm(true);
@@ -521,7 +521,6 @@ function KelolaPelangganPage() {
                     onChange={(e) =>
                       setForm((f) => ({ ...f, ip_address: e.target.value }))
                     }
-                    required
                   />
                 </div>
                 <div>
